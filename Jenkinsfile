@@ -39,7 +39,7 @@ pipeline {
           sh "git checkout master"
           sh "git config --global credential.helper store"
           sh "jx step git credentials"
-	  // comment :v 3
+	  // comment :v 7
           // so we can retrieve the version in later steps
           sh "echo \$(jx-release-version) > VERSION"
           sh "jx step tag --version \$(cat VERSION)"
